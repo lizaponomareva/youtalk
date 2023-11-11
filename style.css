@@ -1,0 +1,114 @@
+:root {
+    --main_font: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 1440px;
+    font-family: var(--main_font);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    height: 76px;
+    background: var(--bg-white, #FFF);
+    box-shadow: 0px -2px 0px 0px #EFF2F2 inset;
+}
+
+nav {
+    margin-left: 51px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.nav-list_item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-list_item>svg {
+    margin-left: 8px;
+}
+
+button {
+    margin-left: auto;
+    width: 230px;
+    height: 48px;
+    font-family: var(--main_font);
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: #E3F5F5;
+    color: #03B2A5;
+    cursor: pointer;
+    border: none;
+}
+
+.section_one {
+    width: 1440px;
+    height: 2283px;
+    background: #FFF;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 92px;
+    color: rgba(51, 51, 51, 0.70);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+}
+
+.section-one_text>svg {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.section_one_text>svg {
+    padding: 0 auto;
+    margin: 8px;
+    align-self: center;
+}
+
+
+.section_two {
+    display: inline-flex;
+    align-items: flex-start;
+    width: 552px;
+    height: 56px;
+    padding-left: 120px;
+    padding-right: 768px;
+    color: var(--text-primary, #333);
+
+    /* H1 48:56 */
+    font-family: var(--main_font);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    /* 116.667% */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1440px;
+    height: 302px;
+    flex-shrink: 0;
+    background: #2963A3;
+}
