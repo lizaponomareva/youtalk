@@ -11,6 +11,8 @@
     <title>youtalk</title>
 </head>
 
+<!-- //TODO: серая линия под хэдером должна быть во всю ширину страницы -->
+
 <body>
     <header>
         <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="51" height="36" viewBox="0 0 51 36" fill="none">
@@ -45,34 +47,76 @@
         </svg>
         <nav>
             <ul class="nav-list">
-                <li class="nav-list_item">О нас</li>
-                <li class="nav-list_item">Тарифы</li>
-                <li class="nav-list_item">Для бизнеса</li>
-                <li class="nav-list_item">Психологам</li>
-                <li class="nav-list_item">Сертификат</li>
-                <li class="nav-list_item">Материалы
+                <li class="nav-list__item">О нас</li>
+                <li class="nav-list__item">Тарифы</li>
+                <li class="nav-list__item">Для бизнеса</li>
+                <li class="nav-list__item">Психологам</li>
+                <li class="nav-list__item">Сертификат</li>
+                <li class="nav-list__item">Материалы
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M2.09998 4.8999L6.99998 9.0999L11.9 4.8999" stroke="#333333" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
                 </li>
-                <li class="nav-list_item">FAQ</li>
+                <li class="nav-list__item">FAQ</li>
             </ul>
         </nav>
         <button>Подобрать психолога</button>
     </header>
 
     <main>
-        <section class="section_one">
-            <span class="section_one_text">
-            </span>Главная <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
+        <div class="breadcrumbs">
+            <span>Главная</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
                 <path d="M0.8125 10.6875L2.375 9.125L5.5 6L2.375 2.875L0.8125 1.3125" stroke="#333333"
                     stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round" />
-            </svg> Блог</span>
-        </section>
-        <section class="section_two">
+            </svg>
             <span>Блог</span>
+        </div>
+
+        <section class="blog-container">
+            <h1>Блог</h1>
+            <section class="tags-container">
+                <div class="tags-container__item">
+                    <span>&#x263A;&#xFE0F;</span>
+                    <span>Все</span>
+                </div>
+
+                <div class="tags-container__item">
+                    <span>Самооценка и самопринятие</span>
+                </div>
+
+                <div class="tags-container__item selected">
+                    <span>&#x1F984;</span>
+                    <span>Self</span>
+                </div>
+
+                <div class="tags-container__item">
+                    <span>Чувства и эмоции</span>
+                </div>
+
+                <div class="tags-container__item">
+                    <span>Тревога</span>
+                </div>
+
+                <div class="tags-container__item">
+                    <span>Упражнения</span>
+                </div>
+
+                <div class="tags-container__item">
+                    <span>Психология питания</span>
+                </div>
+
+                <div class="tags-container__item">
+                    <span>Насилие</span>
+                </div>
+
+                <div class="tags-container__item">
+                    <span>Личное здоровье</span>
+                </div>
+            </section>
         </section>
+
     </main>
     <footer>
         <div class="footer"></div>
