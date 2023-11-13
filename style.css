@@ -11,7 +11,7 @@ body {
     padding: 0 120px;
     width: 1440px;
     font-family: var(--main_font);
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 header {
@@ -95,7 +95,7 @@ button {
 }
 
 .tags-container__item {
-    display: flex;
+    display: inline-flex;
     gap: 4px;
     padding: 6px 8px;
     border-radius: 24px;
@@ -108,4 +108,96 @@ button {
 .tags-container__item.selected {
     border: 2px solid #16C8BB;
     background: #F9FDFD;
+}
+
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 476px);
+    column-gap: 24px;
+    row-gap: 23px;
+    border: 1px dashed black;
+
+
+    margin-top: 23px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px; */
+    /*
+    fill: #FFF;
+    stroke-width: 1px;
+    stroke: #DEDEDE;
+    */
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    width: 588px;
+    height: 500px;
+    fill: #FFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 24px;
+}
+
+.post__small {
+    display: flex;
+    flex-direction: column;
+    width: 384px;
+    height: 476px;
+    fill: #FFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 24px;
+}
+
+.post-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 8px;
+    background-image: url("./assets/blog/burnout.png");
+    width: 384px;
+    height: 476px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.tags-container__item.post-tag {
+    background: rgba(255, 255, 255, 0.70);
+}
+
+.post-bottom {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
+
+.post-bottom__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.post-bottom__author {
+    color: #494949;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+}
+
+.post-bottom__text {
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.post-bottom__date {
+    margin-top: auto;
+    color: #868686;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.25px;
 }
