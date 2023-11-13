@@ -18,8 +18,7 @@ header {
     display: flex;
     align-items: center;
     height: 76px;
-    background: var(--bg-white, #FFF);
-    box-shadow: 0px -2px 0px 0px #EFF2F2 inset;
+    background: #FFF;
 }
 
 nav {
@@ -55,6 +54,13 @@ button {
     color: #03B2A5;
     cursor: pointer;
     border: none;
+}
+
+.header-underline {
+    height: 2px;
+    margin-left: -120px;
+    margin-right: -120px;
+    background-color: #EFF2F2;
 }
 
 .breadcrumbs {
@@ -96,6 +102,7 @@ button {
 
 .tags-container__item {
     display: inline-flex;
+    align-items: center;
     gap: 4px;
     padding: 6px 8px;
     border-radius: 24px;
@@ -111,33 +118,54 @@ button {
 }
 
 .posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin-top: 23px;
+}
+
+.posts-container__large {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.posts-container__small {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 476px);
     column-gap: 24px;
     row-gap: 23px;
-    border: 1px dashed black;
-
-
-    margin-top: 23px;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px; */
-    /*
-    fill: #FFF;
-    stroke-width: 1px;
-    stroke: #DEDEDE;
-    */
 }
 
-.post {
+.post-large {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 588px;
     height: 500px;
     fill: #FFF;
     border: 1px solid #DEDEDE;
     border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.post-large__top {
+    height: 260px;
+}
+
+.post-large__top img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.post-large__bottom {
+    padding: 16px;
+    height: 240px;
 }
 
 .post__small {
@@ -148,54 +176,67 @@ button {
     fill: #FFF;
     border: 1px solid #DEDEDE;
     border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
 
-.post-top {
+.post-small__top {
+    position: relative;
+    height: 260px;
+}
+
+.post-small__top img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.post-small__bottom {
+    padding: 16px;
+    height: 216px;
+}
+
+.post-tags-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 8px;
-    padding: 8px 8px;
-    background-image: url("./assets/blog/burnout.png");
-    width: 384px;
-    height: 476px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    padding: 8px;
+    align-items: flex-start;
 }
 
 .tags-container__item.post-tag {
+    position: relative;
+    z-index: 1;
     background: rgba(255, 255, 255, 0.70);
 }
 
-.post-bottom {
-    display: flex;
-    flex-direction: column;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-}
-
-.post-bottom__title {
+.post__title {
+    margin: 0px;
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
 }
 
-.post-bottom__author {
+.post__author {
     color: #494949;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 0.25px;
 }
 
-.post-bottom__text {
+.post__text {
+    margin-top: 8px;
+    margin-bottom: auto;
     color: #333;
     font-size: 14px;
     line-height: 20px;
 }
 
-.post-bottom__date {
-    margin-top: auto;
+.post__date {
+    position: absolute;
+    bottom: 16px;
     color: #868686;
     font-size: 12px;
     line-height: 18px;

@@ -11,8 +11,6 @@
     <title>youtalk</title>
 </head>
 
-<!-- //TODO: серая линия под хэдером должна быть во всю ширину страницы -->
-
 <body>
     <header>
         <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="51" height="36" viewBox="0 0 51 36" fill="none">
@@ -65,6 +63,8 @@
     </header>
 
     <main>
+        <div class="header-underline"></div>
+
         <div class="breadcrumbs">
             <span>Главная</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">
@@ -117,202 +117,177 @@
             </div>
 
             <div class="posts-container">
-                <!-- <article class="post">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
-                        </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
-                        </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article>
 
-                <article class="post">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
+                <!-- Большие карточки -->
+                <div class="posts-container__large">
+                    <article class="post-large">
+                        <div class="post-large__top">
+                            <img src="./assets/blog/burnout.png" alt="burnout" width="588" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Самооценка и самопринятие</span>
+                                </div>
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
+                        <div class="post-large__bottom">
+                            <h2 class="post__title">Эмоциональное выгорание – стадии и симптомы, методы
+                                восстановления и
+                                профилактики</h2>
+                            <span class="post__author">Автор: Лиза Файнтух</span>
+                            <p class="post__text">Изначально термин «эмоциональное профессиональной сфере и
+                                относился...</p>
+                            <span class="post__date">21.08.2021</span>
                         </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article> -->
+                    </article>
 
-                <article class="post__small">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
+                    <article class="post-large">
+                        <div class="post-large__top">
+                            <img src="./assets/blog/anxiety.png" alt="anxiety" width="588" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
+                        <div class="post-large__bottom">
+                            <h2 class="post__title">Как не утонуть в тревоге и управлять своими страхами</h2>
+                            <span class="post__author">Автор: Екатерина Бельтюкова</span>
+                            <p class="post__text">Один из самых важных навыков, которые может дать работа с
+                                психотерапевтом - умение в разных ситуациях по-разному обходиться ...</p>
+                            <span class="post__date">11.08.2021</span>
                         </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article>
+                    </article>
+                </div>
 
-                <article class="post__small">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
+                <!-- Маленькие карточки -->
+                <div class="posts-container__small">
+                    <article class="post__small">
+                        <div class="post-small__top">
+                            <img src="./assets/blog/sleep.png" alt="sleep" width="384" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Самооценка и самопринятие</span>
+                                </div>
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
+                        <div class="post-small__bottom">
+                            <h2 class="post__title">Эмоциональное выгорание – стадии и симптомы, методы
+                                восстановления и
+                                профилактики</h2>
+                            <span class="post__author">Автор: Лиза Файнтух</span>
+                            <p class="post__text">Изначально термин «эмоциональное профессиональной сфере и
+                                относился...</p>
+                            <span class="post__date">21.08.2021</span>
                         </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="post__small">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
+                    <article class="post__small">
+                        <div class="post-small__top">
+                            <img src="./assets/blog/swim.png" alt="swim" width="384" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
+                        <div class="post-small__bottom">
+                            <h2 class="post__title">Как не утонуть в тревоге и управлять своими страхами</h2>
+                            <span class="post__author">Автор: Екатерина Бельтюкова</span>
+                            <p class="post__text">Один из самых важных навыков, которые может дать работа с
+                                психотерапевтом - умение в разных ситуациях по-разному обходиться ...</p>
+                            <span class="post__date">11.08.2021</span>
                         </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="post__small">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
+                    <article class="post__small">
+                        <div class="post-small__top">
+                            <img src="./assets/blog/emo.png" alt="emo" width="384" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
+                        <div class="post-small__bottom">
+                            <h2 class="post__title">Как управлять своими эмоциями: 8 шагов</h2>
+                            <span class="post__author">Автор: Екатерина Бельтюкова</span>
+                            <p class="post__text">Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции.
+                                Пришло время об этом написать!</p>
+                            <span class="post__date">07.08.2021</span>
                         </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="post__small">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
+                    <article class="post__small">
+                        <div class="post-small__top">
+                            <img src="./assets/blog/work.png" alt="work" width="384" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
+                        <div class="post-small__bottom">
+                            <h2 class="post__title">Эмоциональное выгорание – стадии и симптомы, методы
+                                восстановления и
+                                профилактики</h2>
+                            <span class="post__author">Автор: Лиза Файнтух под редакцией Екатерины Бельтюковой</span>
+                            <p class="post__text">Изначально термин «эмоциональное я...</p>
+                            <span class="post__date">21.08.2021</span>
                         </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="post__small">
-                    <div class="post-top">
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Самооценка и самопринятие</span>
+                    <article class="post__small">
+                        <div class="post-small__top">
+                            <img src="./assets/blog/chat.png" alt="chat" width="384" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tags-container__item post-tag">
-                            <span>&#x1F984;</span>
-                            <span>Self</span>
+                        <div class="post-small__bottom">
+                            <h2 class="post__title">Как не утонуть в тревоге и управлять своими страхами</h2>
+                            <span class="post__author">Автор: Екатерина Бельтюкова</span>
+                            <p class="post__text">Один из самых важных навыков, которые может дать работа с
+                                психотерапевтом - умение в разных ситуациях по-разному обходиться ...</p>
+                            <span class="post__date">11.08.2021</span>
                         </div>
-                    </div>
-                    <div class="post-bottom">
-                        <h2 class="post-bottom__title">Эмоциональное выгорание – стадии и симптомы, методы
-                            восстановления и
-                            профилактики</h2>
-                        <span class="post-bottom__author">Автор: Лиза Файнтух</span>
-                        <p class="post-bottom__text">Изначально термин «эмоциональное профессиональной сфере и
-                            относился...</p>
-                        <span class="post-bottom__date">21.08.2021</span>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- <article class="post">
-                    <h2 class="post-title">Эмоциональное выгорание – стадии и симптомы, методы восстановления и
-                        профилактики</h2>
-                    <div class="post-meta">
-                        <span class="post-date">21.08.2021</span>
-                        <span class="post-author">Автор: Лиза Файнтух</span>
-                    </div>
-                    <p class="post-excerpt">Изначально термин «эмоциональное профессиональной сфере и относился...</p>
-                </article>
-
-                <article class="post">
-                    <h2 class="post-title">Как не утонуть в тревоге и управлять своими страхами</h2>
-                    <div class="post-meta">
-                        <span class="post-date">11.08.2021</span>
-                        <span class="post-author">Автор: Екатерина Бельтюкова</span>
-                    </div>
-                    <p class="post-excerpt">Один из самых важных навыков, которые может дать работа с психотерапевтом
-                        - умение в разных ситуациях по-разному обходиться ...</p>
-                </article> -->
-
+                    <article class="post__small">
+                        <div class="post-small__top">
+                            <img src="./assets/blog/walk.png" alt="walk" width="384" height="260">
+                            <div class="post-tags-container">
+                                <div class="tags-container__item post-tag">
+                                    <span>&#x1F984;</span>
+                                    <span>Self</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-small__bottom">
+                            <h2 class="post__title">Как управлять своими эмоциями: 8 шагов</h2>
+                            <span class="post__author">Автор: Екатерина Бельтюкова</span>
+                            <p class="post__text">Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции.
+                                Пришло время об этом написать!</p>
+                            <span class="post__date">07.08.2021</span>
+                        </div>
+                    </article>
+                </div>
 
             </div>
 
