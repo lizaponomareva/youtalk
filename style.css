@@ -31,11 +31,39 @@ nav {
     list-style-type: none;
 }
 
-.nav-list__item {
+.nav-list li {
     display: flex;
+    gap: 8px;
     align-items: center;
     cursor: pointer;
 }
+
+.nav-list a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 114%;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+}
+
+/* .article-nav-list__item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 51px;
+}
+
+.article-nav-list__item>a {
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 114%;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+
+} */
 
 .nav-list__item>svg {
     margin-left: 8px;
@@ -60,6 +88,15 @@ button {
     margin-left: -120px;
     margin-right: -120px;
     background-color: #EFF2F2;
+}
+
+.gradient {
+    margin-left: -120px;
+    margin-right: -120px;
+    width: 1440px;
+    height: 672px;
+    position: absolute;
+    top: 401px;
 }
 
 .breadcrumbs {
@@ -143,7 +180,7 @@ button {
     align-items: flex-start;
     width: 588px;
     height: 500px;
-    fill: #FFF;
+    background-color: #FFF;
     border: 1px solid #DEDEDE;
     border-radius: 24px;
     overflow: hidden;
@@ -172,7 +209,7 @@ button {
     flex-direction: column;
     width: 384px;
     height: 476px;
-    fill: #FFF;
+    background-color: #FFF;
     border: 1px solid #DEDEDE;
     border-radius: 24px;
     overflow: hidden;
@@ -367,6 +404,11 @@ form[action="subscribe-email"] {
     height: 32px;
     border-radius: 100%;
     background: #EFF5FB;
+}
+
+aside {
+    width: 282px;
+    float: right;
 }
 
 .footer-grid-underline {
