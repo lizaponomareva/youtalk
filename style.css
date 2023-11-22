@@ -60,7 +60,7 @@ button {
     border: none;
 }
 
-button.header-btn {
+.header-btn {
     margin-left: auto;
     width: 230px;
     height: 48px;
@@ -271,8 +271,10 @@ h1 {
     align-self: center;
 }
 
-.bottom-btn-container>button {
+.more-btn {
     width: 182px;
+    height: 48px;
+    margin-bottom: 96px;
     background: #35B3A9;
     color: #FFF;
 }
@@ -280,7 +282,7 @@ h1 {
 footer {
     display: flex;
     flex-direction: column;
-    margin-top: 96px;
+    /* margin-top: 96px; */
     margin-left: -120px;
     margin-right: -120px;
     padding-top: 40px;
@@ -395,12 +397,85 @@ form[action="subscribe-email"] {
 aside {
     width: 282px;
     float: right;
+    margin-top: 88px;
+}
+
+.empty-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    height: 512px;
+    padding: 24px;
+    border-radius: 16px;
+    background: #E6F0FD;
+}
+
+.empty-slots-illustration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 257px;
+    height: 206px;
+}
+
+.empty-slots-illustration img {
+    z-index: 2;
+}
+
+.empty-slots-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+}
+
+.empty-slots-text span {
+    display: flex;
+    text-align: center;
+    width: 220px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.empty-slots-text p {
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.about-btn {
+    margin-top: auto;
+    width: 234px;
+    height: 48px;
+    background: #16C8BB;
+    color: #FFF;
+}
+
+.doctor-suggestion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    height: 481px;
+    padding: 24px;
+    border-radius: 16px;
+    background: #E6F0FD;
+}
+
+.doc-photo {
+    width: 120px;
+    height: 120px;
+    background-image: url('./assets/article/aside2.png');
+    border-radius: 100%;
 }
 
 .article-container {
     max-width: 690px;
     margin-top: 54px;
-    /* border: 1px solid red; */
 }
 
 .article-meta {
@@ -698,6 +773,19 @@ p {
 
 .outro-illustration svg {
     align-self: flex-end;
+}
+
+.orange-pattern {
+    position: absolute;
+    left: 1367px;
+}
+
+.article-gradient {
+    margin-left: -120px;
+    margin-right: -120px;
+    width: 1440px;
+    top: 5625px;
+    margin-top: 25px;
 }
 
 .footer-grid-underline {
