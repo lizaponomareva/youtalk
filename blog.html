@@ -2,6 +2,7 @@
 
 <head lang=”ru”>
     <meta charset=”utf-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +44,7 @@
                 </clipPath>
             </defs>
         </svg>
+
         <nav>
             <ul class="nav-list">
                 <li><a href="#">О нас</a></li>
@@ -60,7 +62,16 @@
                 <li><a href="#">FAQ</a></li>
             </ul>
         </nav>
+
         <button class="header-btn">Подобрать психолога</button>
+
+        <div class="header-burger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path
+                    d="M11 14C11 13.4477 11.4477 13 12 13H28C28.5523 13 29 13.4477 29 14C29 14.5523 28.5523 15 28 15H12C11.4477 15 11 14.5523 11 14ZM11 20C11 19.4477 11.4477 19 12 19H28C28.5523 19 29 19.4477 29 20C29 20.5523 28.5523 21 28 21H12C11.4477 21 11 20.5523 11 20ZM11 26C11 25.4477 11.4477 25 12 25H28C28.5523 25 29 25.4477 29 26C29 26.5523 28.5523 27 28 27H12C11.4477 27 11 26.5523 11 26Z"
+                    fill="#03B2A5" />
+            </svg>
+        </div>
     </header>
 
     <main>
@@ -136,12 +147,10 @@
             </div>
 
             <div class="posts-container">
-
                 <!-- Большие карточки -->
                 <div class="posts-container__large">
                     <article class="post-large">
-                        <div class="post-large__top">
-                            <img src="./assets/blog/burnout.png" alt="burnout" width="588" height="260">
+                        <div class="post-large__top" style="background-image: url('./assets/blog/burnout.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -165,8 +174,7 @@
                     </article>
 
                     <article class="post-large">
-                        <div class="post-large__top">
-                            <img src="./assets/blog/anxiety.png" alt="anxiety" width="588" height="260">
+                        <div class="post-large__top" style="background-image: url('./assets/blog/anxiety.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -187,8 +195,7 @@
                 <!-- Маленькие карточки -->
                 <div class="posts-container__small">
                     <article class="post__small">
-                        <div class="post-small__top">
-                            <img src="./assets/blog/sleep.png" alt="sleep" width="384" height="260">
+                        <div class="post-small__top" style="background-image: url('./assets/blog/sleep.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -212,8 +219,7 @@
                     </article>
 
                     <article class="post__small">
-                        <div class="post-small__top">
-                            <img src="./assets/blog/swim.png" alt="swim" width="384" height="260">
+                        <div class="post-small__top" style="background-image: url('./assets/blog/swim.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -231,8 +237,7 @@
                     </article>
 
                     <article class="post__small">
-                        <div class="post-small__top">
-                            <img src="./assets/blog/emo.png" alt="emo" width="384" height="260">
+                        <div class="post-small__top" style="background-image: url('./assets/blog/emo.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -250,8 +255,7 @@
                     </article>
 
                     <article class="post__small">
-                        <div class="post-small__top">
-                            <img src="./assets/blog/work.png" alt="work" width="384" height="260">
+                        <div class="post-small__top" style="background-image: url('./assets/blog/work.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -270,8 +274,7 @@
                     </article>
 
                     <article class="post__small">
-                        <div class="post-small__top">
-                            <img src="./assets/blog/chat.png" alt="chat" width="384" height="260">
+                        <div class="post-small__top" style="background-image: url('./assets/blog/chat.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -289,8 +292,7 @@
                     </article>
 
                     <article class="post__small">
-                        <div class="post-small__top">
-                            <img src="./assets/blog/walk.png" alt="walk" width="384" height="260">
+                        <div class="post-small__top" style="background-image: url('./assets/blog/walk.png');">
                             <div class="post-tags-container">
                                 <div class="tags-container__item post-tag">
                                     <span>&#x1F984;</span>
@@ -307,9 +309,10 @@
                         </div>
                     </article>
                 </div>
-                <div class="bottom-btn-container">
-                    <button class="more-btn">Еще</button>
-                </div>
+            </div>
+
+            <div class="bottom-btn-container">
+                <button class="more-btn">Еще</button>
             </div>
         </section>
 
@@ -329,7 +332,7 @@
                 <a href="#">Контакты</a>
             </div>
             <div class="letter-menu">
-                <span>Одно письмо в неделю со свежими новостями и акциями</span>
+                <span class="subscribe-title">Одно письмо в неделю со свежими новостями и акциями</span>
                 <form action="subscribe-email">
                     <input type="email" placeholder="Ваш e-mail">
                     <div class="subscribe-email__btn">
@@ -340,8 +343,10 @@
                         </svg>
                     </div>
                 </form>
-                <p>Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О
-                    персональных данных», а также с Политикой конфиденциальности</p>
+                <span class="personal-data-text">
+                    Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О
+                    персональных данных», а также с Политикой конфиденциальности
+                </span>
             </div>
             <div class="social-links">
                 <div class="social-links__resident">
