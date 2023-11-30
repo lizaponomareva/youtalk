@@ -2,6 +2,7 @@
 
 <head lang=”ru”>
     <meta charset=”utf-8”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +44,7 @@
                 </clipPath>
             </defs>
         </svg>
+
         <nav>
             <ul class="nav-list">
                 <li><a href="#">О нас</a></li>
@@ -59,10 +61,19 @@
                 <li><a href="#">FAQ</a></li>
             </ul>
         </nav>
+
         <button class="header-btn">Подобрать психолога</button>
+
+        <div class="header-burger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path
+                    d="M11 14C11 13.4477 11.4477 13 12 13H28C28.5523 13 29 13.4477 29 14C29 14.5523 28.5523 15 28 15H12C11.4477 15 11 14.5523 11 14ZM11 20C11 19.4477 11.4477 19 12 19H28C28.5523 19 29 19.4477 29 20C29 20.5523 28.5523 21 28 21H12C11.4477 21 11 20.5523 11 20ZM11 26C11 25.4477 11.4477 25 12 25H28C28.5523 25 29 25.4477 29 26C29 26.5523 28.5523 27 28 27H12C11.4477 27 11 26.5523 11 26Z"
+                    fill="#03B2A5" />
+            </svg>
+        </div>
     </header>
 
-    <aside>
+    <aside class="promo-sidebar">
         <div class="empty-slots">
             <div class="empty-slots-illustration">
                 <img src="./assets/article/aside1.svg" alt="aside1">
@@ -164,7 +175,7 @@
                 <path d="M0.8125 10.6875L2.375 9.125L5.5 6L2.375 2.875L0.8125 1.3125" stroke="#333333"
                     stroke-opacity="0.7" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            <span>Как не утонуть в тревоге и управлять своими страхами</span>
+            <span class="adaptive-breadcrumb"></span>
         </div>
 
         <section class="article-container">
@@ -176,6 +187,8 @@
                         <span>Автор: Лиза Файнтух</span>
                         <div class="dot-separator"></div>
                         <span>21.08.2021</span>
+                        <div class="dot-separator"></div>
+                        <span>Self</span>
                     </div>
 
                     <img src="./assets/article/photo1.png" alt="photo1" width="690" height="331">
@@ -217,8 +230,11 @@
                     <p class="primary-text">
                         Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных
                         ситуациях по-разному обходиться со своими эмоциями. Снять этот процесс с автопилота и
-                        перевести
-                        его в поле сознания. Давайте, к примеру, разберем тревогу. Можно разложить перед собой целую
+                        перевести его в поле сознания.
+                    </p>
+
+                    <p class="primary-text">
+                        Давайте, к примеру, разберем тревогу. Можно разложить перед собой целую
                         коллекцию доступных реакций и выбрать нужную:
                     </p>
 
@@ -399,9 +415,6 @@
                     <div class="two-columns-row">
                         <div class="text-with-img-column">
                             <img src="./assets/article/photo5.jpeg" alt="photo5" width="333" height="235">
-                            <div class="photo-cover">
-
-                            </div>
                             <p class="primary-text">
                                 Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из
                                 него то, что лучше всего подойдет в каждой конкретной ситуации, тем больше будет
@@ -516,6 +529,96 @@
                 </div>
             </div>
         </section>
+
+        <section class="promo-after-article">
+            <div class="empty-slots">
+                <div class="empty-slots-illustration">
+                    <img src="./assets/article/aside1.svg" alt="aside1">
+                </div>
+                <div class="empty-slots-text">
+                    <span>Загружаем свободные окошки</span>
+                    <p>
+                        Все в порядке, сейчас мы перенаправим вас в сервис записи Qlick, через который удобно выбрать
+                        дату,
+                        время встречи и оплатить её
+                    </p>
+                </div>
+                <button class="about-btn">Подробнее</button>
+            </div>
+
+            <div class="doctor-suggestion">
+                <img src="./assets/article/aside2.svg" alt="aside2">
+
+                <div class="doctor-suggestion-tags-container">
+                    <div class="doctor-suggestion-tag">
+                        <span>&#128221;</span>
+                        <span>Переписка</span>
+                    </div>
+
+                    <div class="doctor-suggestion-tag">
+                        <span>&#128249;</span>
+                        <span>Видео</span>
+                    </div>
+                </div>
+
+                <div class="doctor-description">
+                    <span class="doctor-name">Лилия</span>
+                    <span class="doctor-profession">Психолог</span>
+                    <div class="doctor-meta">
+                        <span>Опыт 6 лет</span>
+                        <div class="doctor-meta-dot-separator"></div>
+                        <span>43 года</span>
+                    </div>
+                </div>
+
+                <div class="doctor-suggestion-line"></div>
+
+                <div class="doctor-skills">
+                    <span class="doctor-skills-title">С чем работает психолог</span>
+
+                    <div class="doctor-skills-item">
+                        <div class="doctor-skills-item-dot-wrap">
+                            <div class="green-dot"></div>
+                        </div>
+                        <span>Тревога, тревожности</span>
+                    </div>
+
+                    <div class="doctor-skills-item">
+                        <div class="doctor-skills-item-dot-wrap">
+                            <div class="green-dot"></div>
+                        </div>
+                        <span>Подавленность</span>
+                    </div>
+
+                    <div class="doctor-skills-item">
+                        <div class="doctor-skills-item-dot-wrap">
+                            <div class="green-dot"></div>
+                        </div>
+                        <span>Тревога и панические атаки</span>
+                    </div>
+                </div>
+
+                <button class="about-btn">Подробнее</button>
+            </div>
+
+            <div class="gift-banner"></div>
+
+            <div class="buy-sessions-promo">
+                <div class="buy-sessions-title">
+                    <span class="buy-sessions-title-number">8</span>
+                    <span class="buy-sessions-title-text">Видео сессий</span>
+                </div>
+
+                <span class="buy-sessions-description">
+                    Проработать небольшие проблемы и продвинуться в решении сложных запросов
+                </span>
+
+                <span class="buy-sessions-price">18 500 ₽</span>
+
+                <button class="buy-button">Купить</button>
+            </div>
+        </section>
+
         <div class="orange-pattern orange-pattern-small">
             <img src="./assets/article/orange_pattern_small.svg" alt="orange_pattern_small">
         </div>

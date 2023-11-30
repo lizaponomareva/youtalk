@@ -1,5 +1,5 @@
 :root {
-    --main_font: 'Montserrat', sans-serif;
+    --main_font: "Montserrat", sans-serif;
 }
 
 * {
@@ -70,6 +70,10 @@ button {
     color: #03B2A5;
 }
 
+.header-burger-btn {
+    display: none;
+}
+
 .header-underline {
     height: 2px;
     margin-left: -120px;
@@ -104,6 +108,10 @@ button {
 
 .breadcrumbs>span:nth-child(1) {
     cursor: pointer;
+}
+
+.adaptive-breadcrumb::after {
+    content: "Как не утонуть в тревоге и управлять своими страхами";
 }
 
 .blog-container {
@@ -385,10 +393,14 @@ form[action="subscribe-email"] {
     background: #EFF5FB;
 }
 
-aside {
+.promo-sidebar {
     width: 282px;
     float: right;
     margin-top: 88px;
+}
+
+.promo-after-article {
+    display: none;
 }
 
 .empty-slots {
@@ -428,7 +440,6 @@ aside {
 }
 
 .about-btn {
-    /* margin-top: auto; */
     width: 234px;
     height: 48px;
     background: #16C8BB;
@@ -551,7 +562,8 @@ aside {
 .gift-banner {
     margin-top: 28px;
     height: 292px;
-    background-image: url('./assets/article/gift_banner.svg');
+    background-image: url("./assets/article/gift_banner.svg");
+    object-fit: cover;
     cursor: pointer;
 }
 
@@ -565,7 +577,7 @@ aside {
     border-radius: 24px;
     border: 1px solid #DEDEDE;
     box-shadow: 0px 30px 50px 0px #EFF5FB;
-    background-image: url('./assets/article/gift.svg');
+    background-image: url("./assets/article/gift.svg");
 }
 
 .buy-sessions-title {
@@ -642,8 +654,17 @@ aside {
     border-radius: 100%;
 }
 
+.article-meta .dot-separator:nth-child(4) {
+    display: none;
+}
+
+.article-meta span:nth-child(5) {
+    display: none;
+    color: #2963A3;
+}
+
 .article-content ul {
-    list-style-image: url('./assets/article/list_dot.svg');
+    list-style-image: url("./assets/article/list_dot.svg");
 }
 
 .article-content li {
@@ -659,7 +680,7 @@ aside {
 }
 
 .article-content__dot {
-    background-image: url('./assets/article/list_dot.png');
+    background-image: url("./assets/article/list_dot.png");
 }
 
 .list-dot-wrap {
@@ -709,7 +730,7 @@ h5 {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-height: 162px;
+    /* max-height: 162px; */
     margin-top: 40px;
     padding: 24px;
     border-radius: 16px;
@@ -739,7 +760,7 @@ h5 {
 .anxiety-todo__list {
     display: grid;
     grid-template-columns: 24px auto;
-    grid-template-rows: 96px 96px;
+    grid-template-rows: repeat(2, auto);
     column-gap: 8px;
     row-gap: 16px;
     margin-top: 16px;
@@ -840,6 +861,7 @@ p {
 
 .text-with-img-row img {
     margin-top: 0px;
+    object-fit: cover;
 }
 
 .text-with-img-row p {
@@ -1090,59 +1112,103 @@ p {
     }
 
     /* article */
-    aside {
+    .promo-sidebar {
         width: 222px;
     }
 
-    .article-intro img {
-        width: 714px;
-    }
-
-    .empty-slots {
+    .promo-sidebar .empty-slots {
         height: 495px;
         padding: 20px;
         gap: 0px;
     }
 
-    .empty-slots-illustration img {
+    .promo-sidebar .empty-slots-illustration img {
         width: 181px;
         height: 181px;
     }
 
-    .empty-slots-text {
+    .promo-sidebar .empty-slots-text {
         width: 100%;
         gap: 8px;
     }
 
-    .empty-slots .about-btn {
+    .promo-sidebar .empty-slots .about-btn {
         width: 182px;
     }
 
-    .doctor-suggestion {
+    .promo-sidebar .doctor-suggestion {
         height: 530px;
         padding-bottom: 14px;
     }
 
-    .doctor-suggestion .about-btn {
+    .promo-sidebar .doctor-suggestion .about-btn {
         width: 174px;
     }
 
-    .gift-banner {
+    .promo-sidebar .gift-banner {
         height: 280px;
         margin-top: 24px;
         background-position: center;
         border-radius: 16px;
     }
 
-    .buy-sessions-promo {
+    .promo-sidebar .buy-sessions-promo {
         height: 308px;
         margin-top: 24px;
         padding: 24px;
-        background-image: url('./assets/article/gift_small.svg');
+        background-image: url("./assets/article/gift_1024.svg");
     }
 
-    .buy-sessions-description {
+    .promo-sidebar .buy-sessions-description {
         margin-right: 0px;
+    }
+
+    .article-meta .dot-separator:nth-child(4) {
+        display: unset;
+    }
+
+    .article-meta span:nth-child(5) {
+        display: unset;
+    }
+
+    .article-content ul li:nth-child(2) {
+        display: none;
+    }
+
+    .article-content ul li:nth-child(3) {
+        display: none;
+    }
+
+    .article-intro img {
+        width: 714px;
+    }
+
+    .article-img-figure img {
+        width: 714px;
+    }
+
+    .highlight {
+        width: 714px;
+    }
+
+    .task-wrap {
+        width: 714px;
+    }
+
+    .text-with-img-column img {
+        width: 345px;
+    }
+
+    .article-tags-wrap {
+        display: none;
+    }
+
+    .article-page-underline {
+        display: none;
+    }
+
+    .outro {
+        display: none;
     }
 
     .orange-pattern-small {
@@ -1152,16 +1218,14 @@ p {
     .orange-pattern-large {
         display: none;
     }
+
+    footer {
+        margin-top: 71px;
+    }
 }
 
 
 /* iPad mini -- 768px */
-@media (min-width: 768px) {
-    .header-burger-btn {
-        display: none;
-    }
-}
-
 @media (max-width: 768px) {
     body {
         padding: 0 20px;
@@ -1176,7 +1240,7 @@ p {
     }
 
     .header-burger-btn {
-        display: initial;
+        display: unset;
         margin-left: auto;
     }
 
@@ -1247,6 +1311,101 @@ p {
     .footer-grid-underline {
         margin-top: 26px;
     }
+
+    /* article */
+    .quote {
+        width: 728px;
+    }
+
+    .article-img-figure img {
+        width: 728px;
+    }
+
+    .highlight {
+        width: 728px;
+    }
+
+    .text-with-img-row {
+        width: 728px;
+    }
+
+    .text-with-img-row img {
+        width: 294px;
+    }
+
+    .text-with-img-row p {
+        width: 418px;
+    }
+
+    .task-wrap {
+        width: 728px;
+    }
+
+    .two-columns-row {
+        width: 728px;
+    }
+
+    .text-with-img-column img {
+        width: 356px;
+    }
+
+    .promo-sidebar {
+        display: none;
+    }
+
+    .promo-after-article>* {
+        margin-top: 0px;
+    }
+
+    .promo-after-article {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 36px;
+        margin-top: 24px;
+        margin-bottom: 59px;
+    }
+
+    .promo-after-article .empty-slots {
+        width: 356px;
+        height: 481px;
+    }
+
+    .promo-after-article .empty-slots .about-btn {
+        width: 310px;
+        margin-bottom: -10px;
+    }
+
+    .promo-after-article .doctor-suggestion {
+        width: 356px;
+        height: 481px;
+    }
+
+    .promo-after-article .doctor-suggestion .about-btn {
+        width: 250px;
+    }
+
+    .promo-after-article .gift-banner {
+        width: 356px;
+        height: 242px;
+        background-image: url("./assets/article/gift_banner_large.svg");
+    }
+
+    .promo-after-article .buy-sessions-promo {
+        width: 356px;
+        height: 248px;
+        background-image: url("./assets/article/gift_768.svg");
+        background-position: center bottom;
+    }
+
+    .promo-after-article .buy-sessions-promo .buy-button {
+        margin-bottom: -30px;
+    }
+
+    .promo-after-article .gift-banner {
+        background-image: url("./assets/article/gift_414.svg");
+    }
 }
 
 
@@ -1259,6 +1418,10 @@ p {
     header {
         height: 74px;
         padding: 0 4px;
+    }
+
+    .breadcrumbs {
+        margin-top: 12px;
     }
 
     .blog-container {
@@ -1346,6 +1509,114 @@ p {
         gap: 23px;
         margin-top: 20px;
     }
+
+    /* article */
+    .article-intro h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .adaptive-breadcrumb::after {
+        content: "Как не утонуть в тревоге и управ...";
+    }
+
+    .article-container {
+        margin-top: 32px;
+    }
+
+    .article-meta {
+        margin-top: 8px;
+    }
+
+    .article-intro img {
+        width: 374px;
+        height: 207px;
+        margin-top: 16px;
+    }
+
+    h3~p {
+        margin-top: 16px;
+    }
+
+    .quote {
+        width: 374px;
+        padding: 16px;
+    }
+
+    .article-img-figure img {
+        width: 374px;
+        height: 207px;
+    }
+
+    .highlight {
+        width: 374px;
+    }
+
+    .text-with-img-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .text-with-img-row img[alt="photo3"] {
+        width: 374px;
+        height: 380px;
+    }
+
+    .text-with-img-row img[alt="photo4"] {
+        width: 374px;
+        height: 207px;
+    }
+
+    .text-with-img-row p {
+        width: 374px;
+    }
+
+    .task-wrap {
+        width: 374px;
+        padding: 16px;
+    }
+
+    .two-columns-row {
+        flex-direction: column;
+        width: 374px;
+    }
+
+    .text-with-img-column img {
+        width: 374px;
+    }
+
+    .promo-after-article {
+        row-gap: 24px;
+        margin-top: 56px;
+        margin-bottom: 127px;
+    }
+
+    .promo-after-article .empty-slots {
+        width: 374px;
+        height: 512px;
+    }
+
+    .promo-after-article .empty-slots .about-btn {
+        margin-bottom: 0px;
+    }
+
+    .promo-after-article .doctor-suggestion {
+        width: 374px;
+    }
+
+    .promo-after-article .gift-banner {
+        width: 374px;
+        height: 280px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    .promo-after-article .buy-sessions-promo {
+        width: 374px;
+        height: 248px;
+        padding: 24px;
+        background-position: left;
+    }
 }
 
 
@@ -1405,5 +1676,118 @@ p {
 
     .subscribe-email__btn {
         display: none;
+    }
+
+    /* article */
+    .article-intro h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .adaptive-breadcrumb::after {
+        content: "Как не утонуть в тр...";
+    }
+
+    .article-intro>p,
+    .article-intro>img,
+    .article-intro>ul,
+    .article-intro>div:not(.article-meta),
+    .article-main>p,
+    .article-main>img,
+    .article-main>ul,
+    .article-main>div {
+        margin-top: 16px;
+    }
+
+    .article-intro img {
+        width: 288px;
+        height: 160px;
+    }
+
+    .quote {
+        width: 288px;
+        height: 290px;
+    }
+
+    .anxiety-todo__list {
+        row-gap: 8px;
+        margin-top: 8px;
+    }
+
+    .article-img-figure img {
+        width: 288px;
+        height: 160px;
+    }
+
+    .highlight {
+        width: 288px;
+        height: 168px;
+    }
+
+    .text-with-img-row img[alt="photo3"] {
+        width: 288px;
+    }
+
+    .text-with-img-row img[alt="photo4"] {
+        width: 288px;
+        height: 160px;
+    }
+
+    .text-with-img-row p {
+        width: 288px;
+    }
+
+    .task-wrap {
+        width: 288px;
+        height: 424px;
+    }
+
+    .two-columns-row {
+        flex-direction: column;
+    }
+
+    .text-with-img-column {
+        width: 288px;
+    }
+
+    .text-with-img-column img {
+        width: 288px;
+        height: 235px;
+    }
+
+    .promo-after-article {
+        width: 288px;
+        margin-top: 16px;
+        margin-bottom: 60px;
+    }
+
+    .promo-after-article .empty-slots {
+        width: 288px;
+    }
+
+    .promo-after-article .empty-slots .about-btn {
+        width: 239px;
+    }
+
+    .promo-after-article .doctor-suggestion {
+        width: 288px;
+    }
+
+    .promo-after-article .gift-banner {
+        width: 374px;
+        height: 292px;
+        background-position: center;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    .promo-after-article .buy-sessions-promo {
+        height: 252px;
+        padding: 24px;
+        background-position: left;
+    }
+
+    .promo-after-article .doctor-suggestion .about-btn {
+        width: 250px;
     }
 }
