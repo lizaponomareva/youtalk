@@ -12,7 +12,6 @@ body {
     padding: 0 120px;
     max-width: 1440px;
     font-family: var(--main_font);
-    /* border: 1px solid grey; */
 }
 
 header {
@@ -135,6 +134,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 4px;
+    height: 32px;
     padding: 6px 8px;
     border-radius: 24px;
     font-size: 14px;
@@ -183,7 +183,7 @@ h1 {
 
 .post-large__top {
     height: 260px;
-    object-fit: contain;
+    background-position: center;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
 }
@@ -256,6 +256,8 @@ h1 {
     margin-bottom: auto;
     font-size: 14px;
     line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: #333;
 }
 
@@ -564,6 +566,7 @@ form[action="subscribe-email"] {
     height: 292px;
     background-image: url("./assets/article/gift_banner.svg");
     object-fit: cover;
+    border-radius: 16px;
     cursor: pointer;
 }
 
@@ -1149,7 +1152,6 @@ p {
         height: 280px;
         margin-top: 24px;
         background-position: center;
-        border-radius: 16px;
     }
 
     .promo-sidebar .buy-sessions-promo {
@@ -1411,6 +1413,8 @@ p {
 
 /* iPhone 11 Pro Max -- 414px */
 @media (max-width: 414px) {
+
+    /* blog */
     body {
         padding: 0 20px;
     }
@@ -1435,6 +1439,8 @@ p {
 
     .tags-container {
         margin-top: 24px;
+        flex-wrap: nowrap;
+        overflow: hidden;
     }
 
     .posts-container {
@@ -1452,6 +1458,7 @@ p {
 
     .post-large__top {
         height: 206px;
+        background-position: bottom left;
     }
 
     .posts-container__small {
@@ -1462,6 +1469,10 @@ p {
     .post__small {
         max-width: 374px;
         max-height: 462px;
+    }
+
+    #s2~.post__small {
+        display: none;
     }
 
     .post-small__top {
@@ -1607,8 +1618,6 @@ p {
     .promo-after-article .gift-banner {
         width: 374px;
         height: 280px;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
     }
 
     .promo-after-article .buy-sessions-promo {
@@ -1777,8 +1786,6 @@ p {
         width: 374px;
         height: 292px;
         background-position: center;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
     }
 
     .promo-after-article .buy-sessions-promo {
